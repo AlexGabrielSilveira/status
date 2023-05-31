@@ -1,13 +1,20 @@
 .navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #111;
-    padding: 5px;
+    padding: 5px 40px 5px 40px;
     box-shadow: 1px 3px 10px 1px #000;
 }
 .navbar h1 {
     color: #fff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 10px;
+    text-align: center;
+}
+.navbar input{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 500px;
 }

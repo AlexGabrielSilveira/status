@@ -1,0 +1,37 @@
+.container {
+    margin-top: 20px;
+    margin-left: 40px;
+    display: flex;
+}
+.stockInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+}
+.stockInfo span {
+    margin-left: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+}
+.stockTitle {
+    font-size: 18pt;
+}
+.date {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+.date p {
+    font-size: 13pt;
+}
+.container img {
+    border-radius: 10px;
+}
