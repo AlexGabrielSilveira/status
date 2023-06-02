@@ -37,11 +37,11 @@ export default function Home() {
     <>
       {load == false ? (
         <div className={styles.infos}>
-            <h2>Ações</h2>
+          <h2>Sto<span>cks</span></h2>
           <div>
             <Infos stocks={stocksNames} type="stocks"/>
           </div>
-            <h2>Criptomoedas</h2>
+          <h2>Cripto<span>moedas</span></h2>
           <div>
             <Infos stocks={criptoNames} type="cripto" />
           </div>

@@ -1,8 +1,12 @@
 .container {
-    margin-top: 20px;
+    margin-top: 60px;
     margin-left: 40px;
+    margin-right: 40px;
     display: flex;
     flex-direction: column;
+}
+.container img {
+    border-radius: 10px;
 }
 .stockInfo {
     display: flex;
@@ -18,38 +22,43 @@
     display: flex;
     flex-direction: column;
 }
+.stockTitle {
+    font-size: 18pt;
+    color: salmon !important;
+}
 .stockInfo span {
     margin-left: 5px;
-    color: #fff;
+    color: #f9f9f9;
     font-weight: bold;
     font-family: Helvetica, sans-serif;
 }
-.stockTitle {
-    font-size: 18pt;
-}
 .date {
-    color: #fff;
+    color: #f9f9f9;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 40px;
 }
 .date p {
     font-size: 13pt;
 }
-.container img {
-    border-radius: 10px;
-}
 .priceContainer {
+    margin-top: 40px;
+}
+.listItems ul{
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    padding-top: 10px;
 }
 .listItems ul {
-    display: flex;
+    text-align: center;
     list-style-type: none;
 }
-.listItems ul li {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.listItems ul li p {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: #f9f9f9;
+}
+.listItems span {
+    color: #f9f9f9;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

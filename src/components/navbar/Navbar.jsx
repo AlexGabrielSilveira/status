@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <nav className={styles.navbar}>
             <Link href="/">
-                <h1>status</h1>
+                <h1>STT4 | <span>Status</span></h1>
             </Link>
             <input type="text" placeholder="Pesquisar ação..."/>
         </nav>

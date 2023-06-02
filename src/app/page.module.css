@@ -14,7 +14,7 @@
 .infos h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.infos span {
+.infos button {
     background-color: #111;
     color: #fff;
     margin: 10px;
@@ -22,12 +22,17 @@
     border-radius: 10px;
     transition: 250ms;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
-.infos span:hover {
+.infos button:hover {
     transition: 250ms;
-    background-color: #ac574d;
+    background-color: salmon;
     box-shadow: 0px 1px 20px 6px #000;
 }
 .infos h2 {
     color: white;
+}
+.infos span {
+    color: salmon;
 }

@@ -3,8 +3,8 @@
 import {useParams} from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './stock.module.css'
-import Image
- from 'next/image'
+import Image from 'next/image'
+import Graphic from '@/components/graphic/Graphic'
 
 export default function stockPage() {
     const[stockInfo, setStockInfo] = useState([])
@@ -13,7 +13,7 @@ export default function stockPage() {
     const params = useParams()
 
     function getStockInfos() {
-        fetch(`https://brapi.dev/api/quote/${params.name}?range=1d&interval=1d&fundamental=true`)
+        fetch(`https://brapi.dev/api/quote/${params.name}?range=6mo&interval=1d&fundamental=true`)
         .then(res => res.json())
         .then(res => {
             setStockInfo(res.results[0])
@@ -32,9 +32,12 @@ export default function stockPage() {
     let d = Date.parse(stockInfo.regularMarketTime)
     let newDate = new Date(d)
     let formatDate= newDate.toLocaleString('pt-BR', { timeZone: 'UTC'})
+
+    let makertCap = Math.round(stockInfo.marketCap)
     
 
     return (
+
         <>
             {load == false ? (
                 <div className={styles.container}>
@@ -58,12 +61,14 @@ export default function stockPage() {
                                 <li><p>Variação (dia)</p> <span>{stockInfo.regularMarketChangePercent.toFixed(2)}%</span> </li>
                                 <li><p>Alta do Dia </p> <span>{stockInfo.regularMarketDayHigh}</span></li>
                                 <li><p>Baixa do Dia </p> <span>{stockInfo.regularMarketDayLow}</span></li>
-                                <li><p>Valor de Mercado </p> <span>{stockInfo.marketCap}Bi</span></li>
+                                <li><p>Valor de Mercado </p> <span>{makertCap} Bi</span></li>
 
                             </ul>
                         </div>
                     </div>
+                    <Graphic stock={stockInfo} />
                 </div>
+
             ): <h1>carregando</h1>}
         </>
     )

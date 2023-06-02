@@ -4,11 +4,11 @@ export default function Infos({ stocks, type }) {
     return (
         <>
             {stocks.map((stock) => (
-                <span>
+                <button>
                     <Link href={`/${type}/${stock}`}>
                     {stock}
                     </Link>
-                </span>
+                </button>
             ))}
         </>
     )
