@@ -13,7 +13,7 @@ export default function stockPage() {
     const params = useParams()
 
     function getStockInfos() {
-        fetch(`https://brapi.dev/api/quote/${params.name}?range=6mo&interval=1d&fundamental=true`)
+        fetch(`https://brapi.dev/api/quote/${params.name}?range=max&interval=1d&fundamental=true&dividends=true`)
         .then(res => res.json())
         .then(res => {
             setStockInfo(res.results[0])
@@ -33,9 +33,6 @@ export default function stockPage() {
     let newDate = new Date(d)
     let formatDate= newDate.toLocaleString('pt-BR', { timeZone: 'UTC'})
 
-    let makertCap = Math.round(stockInfo.marketCap)
-    
-
     return (
 
         <>
@@ -52,18 +49,6 @@ export default function stockPage() {
                         <div className={styles.date}>
                             <p>ultima atualização:</p>
                             <span>{formatDate}</span>
-                        </div>
-                    </div>
-                    <div className={styles.priceContainer}>
-                        <div className={styles.listItems}>
-                            <ul>
-                                <li><p>Preço </p> <span>{stockInfo.regularMarketPrice}</span></li>
-                                <li><p>Variação (dia)</p> <span>{stockInfo.regularMarketChangePercent.toFixed(2)}%</span> </li>
-                                <li><p>Alta do Dia </p> <span>{stockInfo.regularMarketDayHigh}</span></li>
-                                <li><p>Baixa do Dia </p> <span>{stockInfo.regularMarketDayLow}</span></li>
-                                <li><p>Valor de Mercado </p> <span>{makertCap} Bi</span></li>
-
-                            </ul>
                         </div>
                     </div>
                     <Graphic stock={stockInfo} />

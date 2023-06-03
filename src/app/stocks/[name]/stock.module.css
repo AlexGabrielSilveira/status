@@ -41,24 +41,3 @@
 .date p {
     font-size: 13pt;
 }
-.priceContainer {
-    margin-top: 40px;
-}
-.listItems ul{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-}
-.listItems ul {
-    text-align: center;
-    list-style-type: none;
-}
-.listItems ul li p {
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    color: #f9f9f9;
-}
-.listItems span {
-    color: #f9f9f9;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}

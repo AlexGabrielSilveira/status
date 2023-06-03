@@ -39,11 +39,11 @@ export default function Home() {
         <div className={styles.infos}>
           <h2>Sto<span>cks</span></h2>
           <div>
-            <Infos stocks={stocksNames} type="stocks"/>
+            <Infos key={stocksNames.symbol} stocks={stocksNames} type="stocks"/>
           </div>
           <h2>Cripto<span>moedas</span></h2>
           <div>
-            <Infos stocks={criptoNames} type="cripto" />
+            <Infos key={stocksNames.symbol} stocks={criptoNames} type="cripto" />
           </div>
         </div>
       ) : <h1>carregando</h1>}
