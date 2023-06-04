@@ -51,3 +51,20 @@
     font-weight: bold;
     font-family: Helvetica, sans-serif;
 }
+@media (min-width: 0px) and (max-width: 767px) {
+    .chart_container {
+        flex-direction: column;
+    }
+    .chart {
+        width: 100%;
+    }
+    .infos {
+        justify-content: center;
+        flex-direction: row;
+    }
+    .infos p{
+        margin: 10px;
+        color: black;
+        font-size: 8pt;
+    }
+}

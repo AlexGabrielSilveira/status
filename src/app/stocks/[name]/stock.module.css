@@ -37,7 +37,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .date p {
     font-size: 13pt;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    .container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .stockInfo span {
+        font-size: 10pt;
+    }
 }
