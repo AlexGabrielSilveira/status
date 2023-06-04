@@ -44,7 +44,7 @@ export default function Graphic ({ stock }) {
             {stock.dividendsData != [''] ? (
                 <div className={styles.container_dividends}>
                     {stock.dividendsData.cashDividends.map((dividend) => (
-                      <ul key={divide.rate}>
+                      <ul key={dividend.rate}>
                         <li><span>Pagamento:</span> {moment(`${dividend.paymentDate}`).utc().format('DD/MM/YYYY')}</li>
                         <li className={styles.price}><span>R$</span> {dividend.rate.toFixed(2)}</li>
                       </ul>
