@@ -16,14 +16,11 @@ export default function StockPage() {
         fetch(`https://brapi.dev/api/quote/${params.name}?range=max&interval=1d&fundamental=true&dividends=true`)
         .then(res => res.json())
         .then(res => {
-            setStockInfo(res.results[0])
-            console.log(res.results[0])
+            setStockInfo(res?.results[0])
             setLoad(!load)
         })
     }
-    
-    
-    
+
     useEffect(() => {
         getStockInfos()
     },[])
