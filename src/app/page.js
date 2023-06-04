@@ -7,7 +7,6 @@ import Infos from '@/components/infos/Infos'
 export default function Home() { 
   const[load, setLoad] = useState(true)
   const[stocksNames, setStocksNames] = useState([])
-  const[criptoNames, setCriptoNames] = useState([])
 
   
   function getStocksNames() {
@@ -18,18 +17,9 @@ export default function Home() {
         setLoad(false)
       })
   }
-  function getCriptosNames() {
-    fetch('https://brapi.dev/api/v2/crypto/available')
-      .then(res => res.json())
-      .then(res => {
-        setCriptoNames(res.coins.slice(0,50))
-        setLoad(false)
-      })
-  }
   
 
   useEffect(() => {
-    getCriptosNames()
     getStocksNames()
   }, [])
   
@@ -40,10 +30,6 @@ export default function Home() {
           <h2>Sto<span>cks</span></h2>
           <div>
             <Infos key={stocksNames.symbol} stocks={stocksNames} type="stocks"/>
-          </div>
-          <h2>Cripto<span>moedas</span></h2>
-          <div>
-            <Infos key={stocksNames.symbol} stocks={criptoNames} type="cripto" />
           </div>
         </div>
       ) : <h1>carregando</h1>}

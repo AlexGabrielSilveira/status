@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export default function Infos({ stocks, type }) {
+export default function Infos({ stocks, type, key }) {
     return (
         <>
             {stocks.map((stock) => (
-                <button>
+                <button key={key}>
                     <Link href={`/${type}/${stock}`}>
                     {stock}
                     </Link>

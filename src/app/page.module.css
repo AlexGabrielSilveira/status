@@ -1,6 +1,6 @@
 .infos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
@@ -15,7 +15,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .infos button {
-    background-color: #111;
+    background-color: #222;
     color: #fff;
     margin: 10px;
     padding: 10px;
@@ -31,7 +31,7 @@
     box-shadow: 0px 1px 20px 6px #000;
 }
 .infos h2 {
-    color: white;
+    color: #222;
 }
 .infos span {
     color: salmon;

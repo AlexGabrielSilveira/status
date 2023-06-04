@@ -13,27 +13,27 @@
     justify-content: space-around;
 }
 .infos p{
-    color: white;
+    color: black;
     font-size: 14pt;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .infos span {
-    color: white;
+    color: black;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: block;
 }
 .container_dividends {
     width: 100%;
-    color: white;
+    color: black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 .dividend_title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
+    color: black;
     text-align: center;
 }
 .container_dividends ul {
