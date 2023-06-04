@@ -1,12 +1,10 @@
 
 import ApexCharts from 'apexcharts'
 import styles from './graphic.module.css'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import moment from "moment";
 
 export default function Graphic ({ stock }) {
-  const[formartDatas, seFormatDatas] = useState([])
-  let datas = stock.historicalDataPrice
 
     let options = {
         chart: {
@@ -17,23 +15,12 @@ export default function Graphic ({ stock }) {
           data: [30,40,35,49,60,70,91,70]
         }],
         xaxis: {
-          categories: []
+          categories: [1,2,3,4,5,6,7,8]
         } 
       }
-      function getDatas() {
-        datas.map(i => {
-          let d = new Date(i.date * 1000)
-          let formatDate = d.toLocaleString('pt-BR', { timeZone: 'UTC'})
-          seFormatDatas(formatDate)
-        })
-      }
-      function showChart() {
+      useEffect(() => {
         let chart = new ApexCharts(document.querySelector("#chart"), options)
         chart.render()
-      }
-      useEffect(() => {
-        getDatas()
-        showChart()
      },[] ) 
 
 
@@ -57,7 +44,7 @@ export default function Graphic ({ stock }) {
             {stock.dividendsData != [''] ? (
                 <div className={styles.container_dividends}>
                     {stock.dividendsData.cashDividends.map((dividend) => (
-                      <ul>
+                      <ul key={divide.rate}>
                         <li><span>Pagamento:</span> {moment(`${dividend.paymentDate}`).utc().format('DD/MM/YYYY')}</li>
                         <li className={styles.price}><span>R$</span> {dividend.rate.toFixed(2)}</li>
                       </ul>

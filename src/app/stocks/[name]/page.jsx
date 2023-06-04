@@ -6,7 +6,7 @@ import styles from './stock.module.css'
 import Image from 'next/image'
 import Graphic from '@/components/graphic/Graphic'
 
-export default function stockPage() {
+export default function StockPage() {
     const[stockInfo, setStockInfo] = useState([])
     const[load, setLoad] = useState(true)
 
