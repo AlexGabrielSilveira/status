@@ -13,7 +13,7 @@ export default function StockPage() {
     const params = useParams()
 
     function getStockInfos() {
-        fetch(`https://brapi.dev/api/quote/${params.name}?range=max&interval=1d&fundamental=true&dividends=true`)
+        fetch(`https://brapi.dev/api/quote/${params.name}?range=10y&interval=1mo&fundamental=true&dividends=true`)
         .then(res => res.json())
         .then(res => {
             setStockInfo(res?.results[0])

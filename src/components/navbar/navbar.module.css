@@ -41,7 +41,7 @@
 }
 .search:hover {
     transition: 150ms;
-    background-color: rgba(250, 128, 114, 0.555);
+    background-color: #fa8072f6;
 }
 .search div {
     padding-left: 10px;
@@ -52,7 +52,7 @@
 }
 @media (min-width: 0px) and (max-width: 767px) { 
     .navbar h1 {
-        font-size: 8pt;
+        font-size: 12pt;
     }
     .navbar input{
         padding: 5px;
