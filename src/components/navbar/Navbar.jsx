@@ -15,9 +15,12 @@ export default function Navbar() {
 
 
         if(v.length >= 5) {
-            fetch(`https://brapi.dev/api/quote/${value}?fundamental=true`)
+            fetch(`https://brapi.dev/api/quote/${v}?fundamental=true`)
             .then(res => res.json())
             .then(res => {
+                if(!res.results) {
+                    return
+                }
                 setInfos(res?.results[0])
             })
         }
