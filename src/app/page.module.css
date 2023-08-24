@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    margin: 20px;
+}
+.card h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card div{
+    display: flex;
+}
+.card a {
+    filter: grayscale(50%);
+    background: linear-gradient(45deg, salmon, orange);
+    padding: 10px;
+    margin: 2px;
+    display: flex;
+    transition: 250ms;
+}
+.card a:hover {
+    transform: scale(1.07);
+    filter: grayscale(0);
+    transition: 250ms;
+}

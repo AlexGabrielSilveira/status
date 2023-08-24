@@ -1,0 +1,70 @@
+.chart_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.chart {
+    width: 70%;
+}
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.infos p{
+    color: black;
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.infos span {
+    color: black;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+}
+.container_dividends {
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.dividend_title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-align: center;
+}
+.container_dividends ul {
+    border-radius: 10px;
+    padding: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.container_dividends ul li {
+    font-weight: bold;
+}
+.container_dividends ul span{
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    .chart_container {
+        flex-direction: column;
+    }
+    .chart {
+        width: 100%;
+    }
+    .infos {
+        justify-content: center;
+        flex-direction: row;
+    }
+    .infos p{
+        margin: 10px;
+        color: black;
+        font-size: 8pt;
+    }
+}

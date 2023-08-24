@@ -1,0 +1,25 @@
+{
+  "name": "status",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "apexcharts": "^3.40.0",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.4",
+    "moment": "^2.29.4",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-dom": "18.2.0",
+    "recharts": "^2.6.2",
+    "uuid": "^9.0.0"
+  }
+}
