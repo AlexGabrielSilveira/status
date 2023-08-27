@@ -1,30 +1,31 @@
 .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.card {
-    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 .card h1 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.card div{
-    display: flex;
-}
 .card a {
-    filter: grayscale(50%);
-    background: linear-gradient(45deg, salmon, orange);
-    padding: 10px;
-    margin: 2px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px 0.1px #000;
+    color: #000;
+    background-color: #f2f2f2;
+    padding: 5px;
+    margin: 10px;
     transition: 250ms;
 }
-.card a:hover {
-    transform: scale(1.07);
-    filter: grayscale(0);
+.card_summary img {
+    max-width: 70px;
+    max-height: 60px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.card_summary a:hover {
+    transform: scale(0.98);
     transition: 250ms;
 }
