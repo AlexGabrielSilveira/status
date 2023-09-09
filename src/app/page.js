@@ -39,10 +39,6 @@ export default function Home() {
       img: "/BPAN4.jfif"
     },
     {
-      ticker: "BIDI11",
-      img: "/BIDI11.png"
-    },
-    {
       ticker: "ABCB4",
       img: "/ABCB4.png"
     },
